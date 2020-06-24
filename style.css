@@ -1,0 +1,23 @@
+body {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+}
+
+li {
+  font-size: large;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: auto;
+}
+
+form {
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: auto;
+}
