@@ -3,12 +3,12 @@ var storageKey = "todo-storage";
 var list = [
   {
     id: 0,
-    item: "water plants",
+    item: "water Flowers",
     completed: false
   },
   {
-    id: 0,
-    item: "feed cat",
+    id: 1,
+    item: "morning walk",
     completed: false
   }
 ];
@@ -19,15 +19,19 @@ var app = new Vue({
     list: list
   },
 
+  created () {
+    this.list = JSON.parse(localStorage.getItem(storageKey) || '[]')
+  },
 
 
 
   methods: {
     add: function () {
       this.list.push({
+        id: 1,
         item: this.todos,
-        completed: 'false',
-        id: 1
+        completed: 'false'
+
       }),
         this.todos = ''
       localStorage.setItem(storageKey, JSON.stringify(this.list))
@@ -36,7 +40,7 @@ var app = new Vue({
 
     deleteItem: function (index) {
       this.list.splice(this.list.indexOf(index), 1)
-
+      localStorage.setItem(storageKey, JSON.stringify(this.list))
     },
 
   },

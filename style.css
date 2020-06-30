@@ -21,3 +21,7 @@ form {
   margin-top: 30px;
   margin-bottom: auto;
 }
+
+.done {
+  text-decoration: line-through;
+}
