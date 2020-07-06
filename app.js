@@ -36,6 +36,7 @@ var app = new Vue({
         this.todos = ''
       localStorage.setItem(storageKey, JSON.stringify(this.list))
 
+      
     },
 
     deleteItem: function (index) {
